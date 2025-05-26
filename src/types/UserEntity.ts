@@ -13,3 +13,11 @@ export interface IUser{
     language: string;
   };
 };
+
+export type ApiResponse<T> = {
+  status: 'success' | 'error';
+  data: T;
+  message?: string;
+};
+
+export type GetUserResponse = ApiResponse<IUser>;
