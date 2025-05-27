@@ -20,11 +20,11 @@ This is a simple React + TypeScript demo showcasing how to use **Suspense** and 
 
 ##  💤 Suspense & Error Boundary
 ```tsx
-  <Suspense fallback={<Loading />}>
-    <ErrorBoundary fallback={<ErrorUi />}>
-      <UserProfile />
-    </ErrorBoundary>
-  </Suspense>
+  <ErrorBoundary fallbackRender={ErrorUI}>
+    <Suspense fallback={<Loading />}>
+      <App />
+    </Suspense>
+  </ErrorBoundary>
 ```
 
 ## 📦 Installation
